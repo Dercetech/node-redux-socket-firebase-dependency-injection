@@ -1,0 +1,17 @@
+{
+  "name": "node-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "debug": "node --nolazy --inspect-brk=9229 index.js"
+  },
+  "author": "Jem himself",
+  "license": "ISC",
+  "dependencies": {
+    "@google-cloud/firestore": "^0.16.1",
+    "bluebird": "^3.5.1",
+    "hapi": "^17.5.3"
+  }
+}
