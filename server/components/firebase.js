@@ -7,7 +7,7 @@ module.exports = function factory(ENV) {
 
   // Firestore setup
   const firestore = new Firestore({ projectId, keyFilename });
-  firestore.settings(firestoreConfig);
+  firestore.settings(firestoreConfig.settings);
 
   return { firestore };
 };

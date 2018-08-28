@@ -1,6 +1,16 @@
 // const Promise = require('bluebird');
 
-module.exports = function(logger, exitCodes, socketService, store, chatStore, socketStore) {
+module.exports = function(
+  logger,
+  exitCodes,
+  store,
+  // Socket
+  socketService,
+  socketStore,
+  // Chat
+  chatStore,
+  chatService
+) {
   const interface = { start };
 
   function start() {
@@ -8,6 +18,8 @@ module.exports = function(logger, exitCodes, socketService, store, chatStore, so
     // Register feature stores
     store.addStore(chatStore);
     store.addStore(socketStore);
+
+    chatService.sendMessage('Jem was here ୧༼ಠ益ಠ༽୨', 'Jem');
 
     // Start socket server
     logger.spam('[main] server starting...');
@@ -23,13 +35,3 @@ module.exports = function(logger, exitCodes, socketService, store, chatStore, so
 
   return interface;
 };
-
-// const document = firestore.doc('posts/intro-to-firestore3');
-// document
-//   .set({
-//     title: 'Jem was here ୧༼ಠ益ಠ༽୨',
-//     body: 'Hello World'
-//   })
-//   .then(() => {
-//     // Document created successfully.
-//   });

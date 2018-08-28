@@ -18,7 +18,7 @@ module.exports = function factory() {
 
     firebase: {
       projectId: 'mc-tuto-1',
-      keyFilename: path.join(__dirname, 'firebase', 'mc-tuto-1-8bcec8bd7c5d.json'),
+      keyFilename: path.join(__dirname, 'firebase', 'mc-tuto-1-a30504c7ada8.json'),
       firestore: {
         settings: { timestampsInSnapshots: true }
       }
